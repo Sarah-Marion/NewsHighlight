@@ -1,0 +1,41 @@
+{% extends 'base.html' %} {% import 'macros.html' as macro %} {% import 'bootstrap/wtf.html' as wtf%} {% block content %}
+<div class="row">
+    <p></p>
+    <p></p>
+
+    <div class='col-lg-8 left-side'>
+        <h3>SOURCES</h3>
+        {{ macro.displaySources(sources)}}
+    </div>
+    <div class="col-lg-4 right-side">
+        <h3>HEADLINES</h3>
+        <span class='col-xs-12 col-sm-4 col-md-6 col-lg-6 column'>
+            <a href="/headlines/business">
+                <img src="{{url_for('static',filename='images/business.jpeg')}}" alt="business" class="well img-responsive b">
+            </a>
+
+            <a href="/headlines/health">
+                <img src="{{url_for('static',filename='images/health.png')}}" alt="health" class="well img-responsive b">
+            </a>
+
+            <a href="/headlines/general">
+                <img src="{{url_for('static',filename='images/general.jpeg')}}" alt="general" class="well img-responsive b">
+            </a>
+        </span>
+        <span class='col-xs-12 col-sm-4 col-md-6 col-lg-6 column'>
+            <a href="/headlines/technology">
+                <img src="{{url_for('static',filename='images/technology.jpeg')}}" alt="technology" class="well img-responsive b">
+            </a>
+            <a href="/headlines/entertainment">
+                <img src="{{url_for('static',filename='images/entertainment.jpeg')}}" alt="entertainment" class="well img-responsive b">
+            </a>
+            <a href="/headlines/science">
+                <img src="{{url_for('static',filename='images/science.png')}}" alt="science" class="well img-responsive b">
+            </a>
+            <a href="/headlines/sports">
+                <img src="{{url_for('static',filename='images/sports.jpeg')}}" alt="sports" class="well img-responsive b">
+            </a>
+        </span>
+    </div>
+</div>
+{% endblock %}
